@@ -45,7 +45,7 @@ export default function ProviderMutator({ onVisibilityChanged, visible = false, 
             url: providerUrl,
             id: selectedProvider.id,
             name: selectedProvider.name,
-          })
+          }),
         );
         setProviderUrl(null);
         setSelectedProvider(null);
@@ -100,9 +100,7 @@ export default function ProviderMutator({ onVisibilityChanged, visible = false, 
         style={{ marginBottom: '1rem' }}
         description={
           <div>
-            <p>
-              Currently, our Immoscout implementation does not drawing shapes on a map. Use a radius instead.
-            </p>
+            <p>Currently, our Immoscout implementation does not drawing shapes on a map. Use a radius instead.</p>
           </div>
         }
       />
