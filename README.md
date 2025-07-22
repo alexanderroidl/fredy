@@ -38,7 +38,7 @@ _Fredy_ will start with the default port, set to `9998`. You can access _Fredy_ 
 </p>
 
 ## Understanding the fundamentals
-There are 3 important parts in Fredy, that you need to understand to leverage the full power of _Fredy_.
+There are three important parts in Fredy, that you need to understand to leverage the full power of _Fredy_.
 
 #### Provider
 _Fredy_ supports multiple services. Immonet, Immowelt and Ebay are just a few examples. Those services are called providers within _Fredy_. When creating a new job, you can choose one or more providers.
@@ -81,8 +81,8 @@ yarn run test
 # Architecture
 ![Architecture](/doc/architecture.jpg "Architecture")
 
-### Immoscout
-Immoscout has implemented advanced bot detection. In order to work around this, we are using a reversed engineered version of their mobile api. See [Immoscout Reverse Engineering Documentation](https://github.com/orangecoding/fredy/blob/master/reverse-engineered-immoscout.md)
+### ImmoScout24
+ImmoScout24 has implemented advanced bot detection. In order to work around this, we are using a reversed engineered version of their mobile api. See [Immoscout Reverse Engineering Documentation](https://github.com/orangecoding/fredy/blob/master/reverse-engineered-immoscout.md)
 
 # Analytics
 Fredy is completely free (and will always remain free). However, it would be a huge help if you’d allow me to collect some analytical data. 

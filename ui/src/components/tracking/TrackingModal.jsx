@@ -17,7 +17,7 @@ export default function TrackingModal() {
         return null;
     }
 
-    return <Modal
+    return (<Modal
         visible={true}
         onOk={async () => {
             await saveResponse(true);
@@ -47,6 +47,6 @@ export default function TrackingModal() {
                 anonymous and helps me understand which adapters/providers are most frequently used.</p>
             <p>Thanks🤘</p>
         </div>
-    </Modal>;
+    </Modal>);
 
 }

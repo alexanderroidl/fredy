@@ -194,7 +194,7 @@ const GeneralSettings = function GeneralSettings() {
                                     <div>
                                         Analytics are disabled by default. If you choose to enable them, we will begin tracking the following:<br/>
                                         <ul>
-                                            <li>Name of active provider (e.g. Immoscout)</li>
+                                            <li>Name of active provider (e.g. ImmoScout24)</li>
                                             <li>Name of active adapter (e.g. Console)</li>
                                             <li>language</li>
                                             <li>os</li>

@@ -2,9 +2,9 @@
 
 ## What is Immoscout24?
 
-Immobilienscout24 (commonly known as Immoscout) is one of Germany's largest and most popular real estate platforms. It serves as a marketplace where property owners, real estate agents, and property management companies can list apartments, houses, and commercial properties for rent or sale. For people searching for a new home in Germany, Immoscout is often one of the first platforms they check.
+ImmoScout24 is one of Germany's largest and most popular real estate platforms. It serves as a marketplace where property owners, real estate agents, and property management companies can list apartments, houses, and commercial properties for rent or sale. For people searching for a new home in Germany, ImmoScout24 is often one of the first platforms they check.
 
-The platform allows users to filter properties based on various criteria such as location, price, size, number of rooms, and additional features like balconies or built-in kitchens. Immoscout24 is available both as a website and as a mobile application, making it accessible across different devices.
+The platform allows users to filter properties based on various criteria such as location, price, size, number of rooms, and additional features like balconies or built-in kitchens. ImmoScout24 is available both as a website and as a mobile application, making it accessible across different devices.
 
 ## Why do we do this?
 
@@ -16,11 +16,11 @@ Crawling Immoscout24 the oldschool way has become virtually impossible due to th
 4. Behavior analysis to detect non-human patterns
 5. JavaScript-based challenges that must be solved before content is displayed
 
-These protections make it extremely difficult to reliably extract data from Immoscout using conventional web scraping approaches. Even with techniques like rotating proxies or mimicking human behavior, the bot detection systems have become increasingly effective at identifying and blocking automated access attempts.
+These protections make it extremely difficult to reliably extract data from ImmoScout24 using conventional web scraping approaches. Even with techniques like rotating proxies or mimicking human behavior, the bot detection systems have become increasingly effective at identifying and blocking automated access attempts.
 
 ## Mobile API Reverse Engineering
 
-To work around these limitations, we are in the progress of reverse-engineering Immoscout24's mobile API. The mobile applications need to communicate with Immoscout's servers to retrieve listing data, and these API endpoints typically have fewer anti-bot protections than the web interface.
+To work around these limitations, we are in the progress of reverse-engineering ImmoScout24's mobile API. The mobile applications need to communicate with ImmoScout24's servers to retrieve listing data, and these API endpoints typically have fewer anti-bot protections than the web interface.
 
 The mobile API provides several key endpoints:    
 - Search total endpoint: Returns the total number of listings for a given query
