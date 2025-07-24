@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import JobTable from '../../components/table/JobTable';
 import { useSelector, useDispatch } from 'react-redux';
@@ -14,6 +14,41 @@ export default function Jobs() {
   const processingTimes = useSelector((state) => state.jobs.processingTimes);
   const history = useHistory();
   const dispatch = useDispatch();
+
+  // Refresh processing times after each run
+  React.useEffect(() => {
+    let timeoutId;
+
+    const scheduleNextRefresh = () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+
+      // Only schedule if we have processing times data
+      if (!processingTimes?.lastRun || !processingTimes.interval) {
+        return;
+      }
+
+      const nextRunTime = processingTimes.lastRun + processingTimes.interval * 60000;
+      const refreshTime = nextRunTime + 5000; // 5 seconds after next run
+      const msUntilRefresh = Math.max(0, refreshTime - Date.now());
+
+      // Only schedule if the refresh time is in the future
+      if (msUntilRefresh > 0) {
+        timeoutId = setTimeout(() => {
+          dispatch.jobs.getProcessingTimes();
+        }, msUntilRefresh);
+      }
+    };
+    scheduleNextRefresh();
+
+    // Clean up when destroyed
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    };
+  }, [dispatch, processingTimes]);
 
   const onJobRemoval = async (jobId) => {
     try {
